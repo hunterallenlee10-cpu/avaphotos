@@ -1,0 +1,363 @@
+@import "tailwindcss";
+
+/* ───────────────────────── Tokens — "Under the Lights" ───────────────────────── */
+:root {
+  --ink: #0a0b0a;
+  --ink-2: #121412;
+  --ink-3: #1b1e1b;
+  --paper: #f2eee6;
+  --mute: #a7a298; /* 7.4:1 on ink */
+  --amber: #f2b33d; /* scoreboard / stadium-light amber, sampled from her soccer scoreboard frames */
+  --amber-dim: #b9852a;
+  --line: rgb(242 238 230 / 0.14);
+  --accent: var(--amber); /* overridden per gallery */
+  --gutter: clamp(1rem, 3.2vw, 3rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-io: cubic-bezier(0.76, 0, 0.24, 1);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-paper: var(--paper);
+  --color-mute: var(--mute);
+  --color-amber: var(--amber);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+  --font-display: var(--font-display);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --ease-out-expo: var(--ease-out);
+  --ease-in-out-quart: var(--ease-io);
+}
+
+/* ───────────────────────── Base ───────────────────────── */
+html {
+  background: var(--ink);
+  color: var(--paper);
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+body {
+  background: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--amber);
+  color: var(--ink);
+  font-weight: 600;
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: none;
+}
+
+/* ───────────────────────── Type ───────────────────────── */
+.display {
+  font-family: var(--font-display), Impact, sans-serif;
+  font-weight: 800;
+  font-variation-settings: "opsz" 72;
+  text-transform: uppercase;
+  line-height: 0.84;
+  letter-spacing: -0.012em;
+}
+.serif {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.label {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+.smallcaps {
+  font-variant: all-small-caps;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+}
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Scoreboard digits: amber, glowing, rendered through a dot-matrix mask. */
+.scoreboard {
+  font-family: var(--font-display), Impact, sans-serif;
+  font-weight: 700;
+  font-variation-settings: "opsz" 72;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  text-shadow: 0 0 0.35em color-mix(in srgb, var(--accent) 45%, transparent);
+  line-height: 0.85;
+}
+.scoreboard-dots {
+  -webkit-mask-image: radial-gradient(circle at center, #000 0.9px, transparent 1.25px);
+  mask-image: radial-gradient(circle at center, #000 0.9px, transparent 1.25px);
+  -webkit-mask-size: 3px 3px;
+  mask-size: 3px 3px;
+}
+@media (min-width: 768px) {
+  .scoreboard-dots {
+    -webkit-mask-image: radial-gradient(circle at center, #000 1.35px, transparent 1.8px);
+    mask-image: radial-gradient(circle at center, #000 1.35px, transparent 1.8px);
+    -webkit-mask-size: 4.5px 4.5px;
+    mask-size: 4.5px 4.5px;
+  }
+}
+
+.hairline {
+  height: 1px;
+  background: var(--line);
+}
+
+/* Placeholders that must be replaced before launch — loud on purpose. */
+.placeholder-chip {
+  display: inline-block;
+  border: 1px dashed var(--amber);
+  color: var(--amber);
+  padding: 0 0.35em;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-style: normal;
+  font-size: 0.8em;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* ───────────────────────── Photos ───────────────────────── */
+.photo-img {
+  transition: opacity 0.9s var(--ease-out);
+}
+.js .photo-img:not([data-loaded]) {
+  opacity: 0;
+}
+
+/* Crop marks — viewfinder corners used on frames and the cursor. */
+.crop-marks {
+  --c: 14px;
+  --t: 1px;
+  --col: var(--paper);
+  background:
+    linear-gradient(var(--col), var(--col)) top left / var(--c) var(--t),
+    linear-gradient(var(--col), var(--col)) top left / var(--t) var(--c),
+    linear-gradient(var(--col), var(--col)) top right / var(--c) var(--t),
+    linear-gradient(var(--col), var(--col)) top right / var(--t) var(--c),
+    linear-gradient(var(--col), var(--col)) bottom left / var(--c) var(--t),
+    linear-gradient(var(--col), var(--col)) bottom left / var(--t) var(--c),
+    linear-gradient(var(--col), var(--col)) bottom right / var(--c) var(--t),
+    linear-gradient(var(--col), var(--col)) bottom right / var(--t) var(--c);
+  background-repeat: no-repeat;
+}
+
+/* ───────────────────────── Film grain ───────────────────────── */
+.grain {
+  position: fixed;
+  inset: -50%;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.4 -.25'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 0.9s steps(6) infinite;
+  will-change: transform;
+}
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  17% { transform: translate(-6%, 4%); }
+  33% { transform: translate(5%, -7%); }
+  50% { transform: translate(-3%, 8%); }
+  67% { transform: translate(8%, 2%); }
+  83% { transform: translate(-7%, -5%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ───────────────────────── Cursor ───────────────────────── */
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 70;
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  transition:
+    width 0.45s var(--ease-out),
+    height 0.45s var(--ease-out),
+    margin 0.45s var(--ease-out),
+    opacity 0.3s;
+  mix-blend-mode: difference;
+}
+.cursor .crop-marks {
+  position: absolute;
+  inset: 0;
+  --c: 8px;
+}
+.cursor-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--paper);
+  transition: opacity 0.2s;
+}
+.cursor-label {
+  position: absolute;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  color: var(--paper);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.cursor[data-state="view"] {
+  width: 92px;
+  height: 92px;
+  margin: -46px 0 0 -46px;
+}
+.cursor[data-state="view"] .crop-marks {
+  --c: 14px;
+}
+.cursor[data-state="view"] .cursor-label {
+  opacity: 1;
+}
+.cursor[data-state="view"] .cursor-dot {
+  opacity: 0;
+}
+.cursor[data-state="link"] {
+  width: 52px;
+  height: 52px;
+  margin: -26px 0 0 -26px;
+}
+.cursor[data-hidden] {
+  opacity: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  html.has-cursor,
+  html.has-cursor a,
+  html.has-cursor button,
+  html.has-cursor [data-cursor] {
+    cursor: none;
+  }
+  html.has-cursor input,
+  html.has-cursor textarea,
+  html.has-cursor select {
+    cursor: auto;
+  }
+}
+
+/* ───────────────────────── Route transition curtain ───────────────────────── */
+.curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+  background: var(--amber);
+  color: var(--ink);
+  clip-path: inset(100% 0 0 0);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--gutter);
+}
+
+/* ───────────────────────── Masked line reveals ───────────────────────── */
+.mask-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.04em;
+  margin-bottom: -0.04em;
+}
+.mask-line > span {
+  display: block;
+}
+.js .reveal-up:not(.is-in) > .mask-line > span {
+  transform: translateY(105%);
+}
+.reveal-up > .mask-line > span {
+  transition: transform 1.1s var(--ease-out);
+}
+.reveal-up > .mask-line:nth-child(2) > span { transition-delay: 0.08s; }
+.reveal-up > .mask-line:nth-child(3) > span { transition-delay: 0.16s; }
+
+.js .fade-up:not(.is-in) {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.fade-up {
+  transition:
+    opacity 1s var(--ease-out),
+    transform 1s var(--ease-out);
+}
+
+/* Link underline that draws in on hover. */
+.u-link {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  transition: background-size 0.5s var(--ease-out);
+}
+.u-link:hover,
+.u-link:focus-visible {
+  background-size: 100% 1px;
+}
+
+/* ───────────────────────── Reduced motion ───────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+  .grain {
+    animation: none;
+  }
+  .js .reveal-up:not(.is-in) > .mask-line > span {
+    transform: none;
+    opacity: 0;
+  }
+  .reveal-up > .mask-line > span {
+    transition: opacity 0.6s ease;
+  }
+  .js .fade-up:not(.is-in) {
+    transform: none;
+  }
+  .fade-up {
+    transition: opacity 0.6s ease;
+  }
+}
