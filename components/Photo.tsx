@@ -1,8 +1,6 @@
-"use client";
-
 import { getImageProps } from "next/image";
 import { preload } from "react-dom";
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import type { CSSProperties } from "react";
 import { makeLoader } from "@/lib/image";
 import type { Photo as PhotoT } from "@/lib/photos";
 
@@ -11,8 +9,10 @@ type Props = {
   sizes: string;
   /** Fill the parent (parent must be positioned) and crop with the photo's focal point. */
   fill?: boolean;
-  /** Only for the single LCP image on a page. */
+  /** Only for the single LCP image on a page (adds a preload). */
   priority?: boolean;
+  /** Above-the-fold image that isn't worth a preload: load now, high priority. */
+  eager?: boolean;
   className?: string;
   imgClassName?: string;
   style?: CSSProperties;
@@ -26,14 +26,19 @@ type Props = {
  * <picture>, built from next/image's getImageProps so srcset/sizes/lazy
  * loading follow Next's rules. The wrapper paints the dominant colour plus a
  * tiny blurred preview until the full image has decoded.
+ *
+ * No "use client": it renders on the server for static pages (no hydration
+ * cost, no props serialised into the RSC payload) and inside client
+ * components where needed. Fade-in for late images is handled globally by
+ * <ImageFader/>.
  */
-export function Photo({ photo, sizes, fill, priority, className = "", imgClassName = "", style, alt, ariaHidden }: Props) {
+export function Photo({ photo, sizes, fill, priority, eager, className = "", imgClassName = "", style, alt, ariaHidden }: Props) {
   const common = {
     src: photo.src,
     alt: alt ?? photo.alt,
     sizes,
     ...(fill ? { fill: true as const } : { width: photo.width, height: photo.height }),
-    ...(priority ? { loading: "eager" as const, fetchPriority: "high" as const } : { loading: "lazy" as const }),
+    ...(priority || eager ? { loading: "eager" as const, fetchPriority: "high" as const } : { loading: "lazy" as const }),
   };
   const avif = getImageProps({ ...common, loader: makeLoader("avif", photo.widths) }).props;
   const { props: img } = getImageProps({ ...common, loader: makeLoader("webp", photo.widths) });
@@ -48,12 +53,6 @@ export function Photo({ photo, sizes, fill, priority, className = "", imgClassNa
     });
   }
 
-  const ref = useRef<HTMLImageElement>(null);
-  const [loaded, setLoaded] = useState(false);
-  useEffect(() => {
-    // The image may finish before hydration, in which case onLoad never fires.
-    if (ref.current?.complete && ref.current.naturalWidth > 0) setLoaded(true);
-  }, []);
 
   const wrapperStyle: CSSProperties = {
     backgroundColor: photo.dominant,
@@ -72,13 +71,11 @@ export function Photo({ photo, sizes, fill, priority, className = "", imgClassNa
     >
       <picture>
         <source type="image/avif" srcSet={avif.srcSet} sizes={sizes} />
-        {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+        {/* eslint-disable-next-line jsx-a11y/alt-text -- alt comes from getImageProps */}
         <img
           {...img}
-          ref={ref}
-          onLoad={() => setLoaded(true)}
-          data-loaded={loaded || undefined}
           className={`photo-img h-full w-full object-cover ${imgClassName}`}
+          data-fade={priority || eager ? undefined : ""}
           style={{ ...img.style, objectPosition: photo.focus }}
         />
       </picture>

@@ -2,10 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { NAV, SPORTS } from "@/content/site";
-import { prefersReducedMotion, scrollToTop } from "./SmoothScroll";
+import { getMotion, loadMotion, prefersReducedMotion } from "@/lib/motion";
+import { scrollToTop } from "./SmoothScroll";
 
 function labelFor(pathname: string) {
   if (pathname === "/") return { n: "00", label: "Home" };
@@ -30,7 +29,12 @@ export function RouteTransition() {
   const [label, setLabel] = useState(labelFor(pathname));
 
   useEffect(() => {
+    // warm GSAP in the background; until it lands, links navigate normally
+    void loadMotion();
     const onClick = (e: MouseEvent) => {
+      const m = getMotion();
+      if (!m) return;
+      const { gsap } = m;
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       const a = (e.target as Element | null)?.closest?.("a");
       if (!a || !a.href || (a.target && a.target !== "_self") || a.hasAttribute("download")) return;
@@ -75,7 +79,11 @@ export function RouteTransition() {
           },
         },
       );
-      gsap.fromTo(el.querySelectorAll("[data-curtain-label]"), { yPercent: 110 }, { yPercent: 0, duration: 0.7, delay: 0.2, ease: "expo.out" });
+      gsap.fromTo(
+        el.querySelectorAll("[data-curtain-label]"),
+        { yPercent: 110 },
+        { yPercent: 0, duration: 0.7, delay: 0.2, ease: "expo.out" },
+      );
     };
     document.addEventListener("click", onClick, true);
     return () => document.removeEventListener("click", onClick, true);
@@ -84,6 +92,7 @@ export function RouteTransition() {
   useEffect(() => {
     if (!pending.current || pending.current !== pathname) return;
     pending.current = null;
+    const { gsap, ScrollTrigger } = getMotion()!;
     const el = curtain.current!;
     scrollToTop();
     // Let the new page lay out before ScrollTrigger measures it.

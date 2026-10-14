@@ -47,9 +47,11 @@ export function Footer() {
           </div>
         </nav>
       </div>
-      <div aria-hidden="true" className="display mt-16 select-none overflow-hidden text-[20.5vw] leading-[0.78] tracking-[-0.02em] text-ink-3 md:mt-24">
-        {BRAND.firstName}&nbsp;{BRAND.lastName}
-      </div>
+      <div
+        aria-hidden="true"
+        data-word={`${BRAND.firstName}\u00a0${BRAND.lastName}`}
+        className="ghost-word display mt-16 select-none overflow-hidden whitespace-nowrap text-[20.5vw] leading-[0.78] tracking-[-0.02em] text-ink-3 md:mt-24"
+      />
       <div className="label mt-6 flex flex-col gap-2 text-mute md:flex-row md:justify-between">
         <span>© {YEAR} {BRAND.name}</span>
         <span>All photographs © {BRAND.person}. Please don’t reuse without permission.</span>

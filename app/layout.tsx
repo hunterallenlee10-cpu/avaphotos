@@ -1,21 +1,26 @@
 import type { Metadata, Viewport } from "next";
-import { Big_Shoulders, Instrument_Serif, Inter_Tight } from "next/font/google";
+import { Instrument_Serif, Inter_Tight } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { BRAND, SEO, SITE_URL } from "@/content/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
 import { Cursor } from "@/components/motion/Cursor";
-import { RevealObserver } from "@/components/motion/RevealObserver";
 import { RouteTransition } from "@/components/motion/RouteTransition";
+import { ImageFader } from "@/components/motion/ImageFader";
 import { JsonLd, personLd, businessLd } from "@/components/JsonLd";
 
-const display = Big_Shoulders({
-  subsets: ["latin"],
+// Big Shoulders, instanced at its 72pt "Display" optical size, weight 800,
+// Latin-subset (18 KB vs 57 KB for the full variable font). Built from the
+// Google Fonts source with fontTools — see assets/fonts/README.md.
+const display = localFont({
+  src: "../assets/fonts/BigShoulders-72-800.woff2",
+  weight: "800",
   variable: "--font-display",
-  axes: ["opsz"],
-  adjustFontFallback: false,
   display: "swap",
+  fallback: ["Impact", "Arial Narrow", "sans-serif"],
+  adjustFontFallback: false,
 });
 const serif = Instrument_Serif({
   subsets: ["latin"],
@@ -57,10 +62,6 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${display.variable} ${serif.variable} ${sans.variable}`} suppressHydrationWarning>
-      <head>
-        {/* Lets CSS hide not-yet-revealed content only when JS will reveal it. */}
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
-      </head>
       <body className="antialiased">
         <a href="#main" className="skip-link">Skip to content</a>
         <Header />
@@ -72,7 +73,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Cursor />
         <RouteTransition />
         <SmoothScroll />
-        <RevealObserver />
+        <ImageFader />
         <JsonLd data={[personLd(), businessLd()]} />
       </body>
     </html>

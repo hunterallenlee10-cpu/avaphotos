@@ -75,6 +75,8 @@ export type SportMeta = {
   name: string;
   /** Short line in Ava's voice shown on the gallery page. */
   blurb: string;
+  /** Gallery accent, hand-sampled from something in the frames themselves. */
+  accent: string;
 };
 
 /** Order here is the order on the Work index. New sports from the Instagram
@@ -82,31 +84,37 @@ export type SportMeta = {
 export const SPORTS: SportMeta[] = [
   {
     slug: "soccer",
+    accent: "#F2B33D", // scoreboard amber
     name: "Soccer",
     blurb: "Night matches, glowing scoreboards, and the split second after the ball hits the net.",
   },
   {
     slug: "lacrosse",
+    accent: "#7FD1A3", // Stevenson green under the lights
     name: "Lacrosse",
     blurb: "My sport. I know what a dodge looks like before it happens.",
   },
   {
     slug: "football",
+    accent: "#A9D46E", // turf
     name: "Football",
     blurb: "Friday nights in Virginia got me started. Saturdays at Stevenson kept me going.",
   },
   {
     slug: "baseball",
+    accent: "#E39463", // infield clay
     name: "Baseball",
     blurb: "Long innings, short moments. Half the story happens in the dugout.",
   },
   {
     slug: "beach-volleyball",
+    accent: "#72BBEA", // clear sky over the sand
     name: "Beach Volleyball",
     blurb: "Hard sun, bright sand, and athletes hanging in the air.",
   },
   {
     slug: "portraits",
+    accent: "#EFA04A", // fall leaves
     name: "Portraits & Grads",
     blurb: "Senior and grad portraits in the places that mattered: the stadium, the walk to class, the crew you came up with.",
   },

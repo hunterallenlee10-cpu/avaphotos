@@ -1,7 +1,7 @@
 import type { ImageLoaderProps } from "next/image";
 
 /** Widths written by scripts/process-images.ts. */
-const AVAILABLE = [640, 1080, 1600, 2400];
+const AVAILABLE = [640, 828, 1080, 1600, 2400];
 
 /** Round a requested width up to the nearest pre-generated variant that the
  *  photo actually has (smaller originals may stop below 2400). */

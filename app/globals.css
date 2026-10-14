@@ -89,7 +89,6 @@ body {
 .display {
   font-family: var(--font-display), Impact, sans-serif;
   font-weight: 800;
-  font-variation-settings: "opsz" 72;
   text-transform: uppercase;
   line-height: 0.84;
   letter-spacing: -0.012em;
@@ -120,14 +119,15 @@ body {
 /* Scoreboard digits: amber, glowing, rendered through a dot-matrix mask. */
 .scoreboard {
   font-family: var(--font-display), Impact, sans-serif;
-  font-weight: 700;
-  font-variation-settings: "opsz" 72;
+  font-weight: 800;
   font-variant-numeric: tabular-nums;
   color: var(--accent);
   text-shadow: 0 0 0.35em color-mix(in srgb, var(--accent) 45%, transparent);
   line-height: 0.85;
 }
 .scoreboard-dots {
+  /* a wide glow would be dotted into a visible box by the mask — keep it tight */
+  text-shadow: 0 0 5px color-mix(in srgb, var(--accent) 55%, transparent);
   -webkit-mask-image: radial-gradient(circle at center, #000 0.9px, transparent 1.25px);
   mask-image: radial-gradient(circle at center, #000 0.9px, transparent 1.25px);
   -webkit-mask-size: 3px 3px;
@@ -161,11 +161,50 @@ body {
 }
 
 /* ───────────────────────── Photos ───────────────────────── */
+/* Images paint as soon as they arrive. Only frames still loading when the
+   page hydrates are hidden and faded in, so LCP never waits on JS. */
 .photo-img {
   transition: opacity 0.9s var(--ease-out);
 }
-.js .photo-img:not([data-loaded]) {
+.photo-img[data-pending] {
   opacity: 0;
+}
+
+/* Hero name: CSS-only rise so it paints without waiting for hydration. */
+.hero-name .mask-line > span {
+  animation: rise 1.2s var(--ease-out) both;
+}
+.hero-name .mask-line:nth-child(2) > span {
+  animation-delay: 0.09s;
+}
+@keyframes rise {
+  from { transform: translateY(105%); }
+  to { transform: none; }
+}
+
+.hero-fade {
+  animation: hero-fade 1s var(--ease-out) both;
+}
+@keyframes hero-fade {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+/* the hero line is the LCP text on mobile: move it, never hide it */
+.hero-rise {
+  animation: hero-rise 1.2s var(--ease-out) both;
+}
+@keyframes hero-rise {
+  from { transform: translateY(22px); }
+  to { transform: none; }
+}
+@keyframes hero-fade-plain {
+  from { opacity: 0.001; }
+  to { opacity: 1; }
+}
+
+/* Decorative text rendered from an attribute (kept out of the a11y tree). */
+.ghost-word::before {
+  content: attr(data-word);
 }
 
 /* Crop marks — viewfinder corners used on frames and the cursor. */
@@ -296,7 +335,10 @@ body {
   padding: var(--gutter);
 }
 
-/* ───────────────────────── Masked line reveals ───────────────────────── */
+/* ───────────────────────── Scroll reveals ─────────────────────────
+   Pure CSS scroll-driven animations: no JS, nothing waits on hydration, and
+   anything already on screen at load renders in its final state. Browsers
+   without view timelines (and reduced-motion users) simply see the content. */
 .mask-line {
   display: block;
   overflow: hidden;
@@ -306,23 +348,35 @@ body {
 .mask-line > span {
   display: block;
 }
-.js .reveal-up:not(.is-in) > .mask-line > span {
-  transform: translateY(105%);
-}
-.reveal-up > .mask-line > span {
-  transition: transform 1.1s var(--ease-out);
-}
-.reveal-up > .mask-line:nth-child(2) > span { transition-delay: 0.08s; }
-.reveal-up > .mask-line:nth-child(3) > span { transition-delay: 0.16s; }
 
-.js .fade-up:not(.is-in) {
-  opacity: 0;
-  transform: translateY(24px);
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal-up {
+      view-timeline-name: --reveal;
+    }
+    .reveal-up > .mask-line > span {
+      animation: rise linear both;
+      animation-timeline: --reveal;
+      animation-range: entry 0% entry 85%;
+      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-up > .mask-line:nth-child(2) > span {
+      animation-range: entry 10% entry 95%;
+    }
+    .reveal-up > .mask-line:nth-child(3) > span {
+      animation-range: entry 20% entry 100%;
+    }
+    .fade-up {
+      animation: fade-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  }
 }
-.fade-up {
-  transition:
-    opacity 1s var(--ease-out),
-    transform 1s var(--ease-out);
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: none; }
 }
 
 /* Link underline that draws in on hover. */
@@ -347,17 +401,8 @@ body {
   .grain {
     animation: none;
   }
-  .js .reveal-up:not(.is-in) > .mask-line > span {
-    transform: none;
-    opacity: 0;
-  }
-  .reveal-up > .mask-line > span {
-    transition: opacity 0.6s ease;
-  }
-  .js .fade-up:not(.is-in) {
-    transform: none;
-  }
-  .fade-up {
-    transition: opacity 0.6s ease;
+  .hero-name .mask-line > span,
+  .hero-fade {
+    animation: hero-fade-plain 0.6s ease both !important;
   }
 }

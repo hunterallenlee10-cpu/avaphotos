@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Photo } from "@/components/Photo";
 import type { Photo as PhotoT } from "@/lib/photos";
 import { BRAND, HOME } from "@/content/site";
-import { pad } from "@/lib/photos";
+import { pad } from "@/lib/format";
 
 const HOLD = 5200; // ms each frame is on screen
 
@@ -17,12 +17,13 @@ const HOLD = 5200; // ms each frame is on screen
 export function Hero({ frames }: { frames: (PhotoT & { href: string; sportName: string })[] }) {
   const [active, setActive] = useState(0);
   const [mounted, setMounted] = useState(1);
-  const [paused, setPaused] = useState(false);
+  // The reel pauses when the visitor asks (button) or when nobody can see it.
+  const [userPaused, setUserPaused] = useState(false);
+  const [offscreen, setOffscreen] = useState(false);
+  const paused = userPaused || offscreen;
   const [entered, setEntered] = useState(false);
-  const reduced = useRef(false);
 
   useEffect(() => {
-    reduced.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const t = setTimeout(() => setMounted(frames.length), 1200);
     const raf = requestAnimationFrame(() => setEntered(true));
     return () => {
@@ -42,7 +43,7 @@ export function Hero({ frames }: { frames: (PhotoT & { href: string; sportName: 
   useEffect(() => {
     const el = ref.current!;
     let visible = true;
-    const sync = () => setPaused(!visible || document.hidden);
+    const sync = () => setOffscreen(!visible || document.hidden);
     const io = new IntersectionObserver(([e]) => {
       visible = e.isIntersecting;
       sync();
@@ -61,7 +62,8 @@ export function Hero({ frames }: { frames: (PhotoT & { href: string; sportName: 
     <section
       ref={ref}
       aria-label="Introduction"
-      className="relative h-[100svh] min-h-[560px] w-full overflow-hidden bg-ink"
+      /* 94svh, not 100: Chromium ignores viewport-filling images as LCP candidates */
+      className="relative h-[94svh] min-h-[540px] w-full overflow-hidden bg-ink"
     >
       <div className="absolute inset-0">
         {frames.slice(0, mounted).map((f, i) => (
@@ -72,7 +74,7 @@ export function Hero({ frames }: { frames: (PhotoT & { href: string; sportName: 
             aria-hidden={i !== active}
           >
             <div
-              className="absolute inset-0 will-change-transform"
+              className="absolute inset-0 will-change-transform motion-reduce:!scale-100 motion-reduce:!transform-none"
               style={{
                 transform: i === active && entered ? "scale(1)" : "scale(1.08)",
                 transition: i === active ? `transform ${HOLD + 1600}ms linear` : "transform 0s 1.6s",
@@ -88,7 +90,7 @@ export function Hero({ frames }: { frames: (PhotoT & { href: string; sportName: 
 
       <div className="absolute inset-x-0 bottom-0 z-10 px-(--gutter) pb-6 md:pb-10">
         <div className="mb-5 flex items-end justify-between gap-6 md:mb-8">
-          <p className={`label text-paper/80 transition-opacity delay-700 duration-1000 ${entered ? "opacity-100" : "opacity-0"}`}>
+          <p className="hero-fade label text-paper/80 [animation-delay:0.7s]">
             {HOME.heroKicker}
           </p>
           <div className="hidden text-right md:block">
@@ -102,18 +104,14 @@ export function Hero({ frames }: { frames: (PhotoT & { href: string; sportName: 
           </div>
         </div>
 
-        <h1 className={`reveal-up display text-[30vw] md:text-[clamp(5.2rem,24.5vw,26rem)] leading-[0.78] ${entered ? "is-in" : ""}`}>
+        <h1 className="hero-name display text-[30vw] leading-[0.78] md:text-[clamp(5.2rem,24.5vw,26rem)]">
           <span className="mask-line"><span>{BRAND.firstName}</span></span>
           <span className="mask-line"><span>{BRAND.lastName}</span></span>
           <span className="sr-only"> — {HOME.heroKicker}</span>
         </h1>
 
         <div className="mt-5 flex flex-col gap-5 md:mt-6 md:flex-row md:items-end md:justify-between">
-          <p
-            className={`serif max-w-[26ch] text-[clamp(1.45rem,2.6vw,2.4rem)] leading-[1.05] transition-[opacity,transform] delay-500 duration-1000 ease-out-expo ${
-              entered ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-            }`}
-          >
+          <p className="hero-rise serif max-w-[26ch] text-[clamp(1.45rem,2.6vw,2.4rem)] leading-[1.05] [animation-delay:0.45s]">
             {HOME.heroLine}
           </p>
           <div className="flex items-center gap-4">
@@ -134,10 +132,9 @@ export function Hero({ frames }: { frames: (PhotoT & { href: string; sportName: 
             <button
               type="button"
               className="label min-h-11 px-2 text-mute hover:text-paper"
-              onClick={() => setPaused((p) => !p)}
-              aria-pressed={paused}
+              onClick={() => setUserPaused((p) => !p)}
             >
-              {paused ? "Play" : "Pause"}
+              {userPaused ? "Play" : "Pause"}
             </button>
           </div>
         </div>

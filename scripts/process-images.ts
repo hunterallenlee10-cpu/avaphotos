@@ -3,8 +3,7 @@
  *
  * Reads originals from ./_source (never committed), applies the curation in
  * scripts/curation.json, and writes:
- *   public/photos/<id>-<width>.avif|webp   responsive variants (EXIF/GPS stripped)
- *   public/photos/og/<id>.jpg              1200×630 crops for Open Graph cards
+ *   public/photos/<id>-<width>.avif|webp   responsive variants at 640–2400px (EXIF/GPS stripped)
  *   content/photos.json                    metadata consumed by the site
  *
  * Re-runs are incremental: variants that already exist and are newer than the
@@ -13,16 +12,15 @@
 import fs from "node:fs/promises";
 import { existsSync, statSync } from "node:fs";
 import path from "node:path";
-import sharp from "sharp";
+import sharp, { type Sharp } from "sharp";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SOURCE = path.join(ROOT, "_source");
 const OUT = path.join(ROOT, "public/photos");
-const OG_OUT = path.join(OUT, "og");
 const CURATION = path.join(ROOT, "scripts/curation.json");
 const MANIFEST = path.join(ROOT, "content/photos.json");
 
-export const WIDTHS = [640, 1080, 1600, 2400] as const;
+export const WIDTHS = [640, 828, 1080, 1600, 2400] as const;
 const FORCE = process.argv.includes("--force");
 
 type CurationEntry = {
@@ -56,7 +54,7 @@ const hex = (n: number) => n.toString(16).padStart(2, "0");
 
 /** Night-game correction for the RAW lacrosse set: set black/white points,
  *  add a touch of contrast and colour so it sits with Ava's edited work. */
-function applyGrade(img: sharp.Sharp, grade?: CurationEntry["grade"]) {
+function applyGrade(img: Sharp, grade?: CurationEntry["grade"]) {
   if (grade !== "night") return img;
   return img
     .normalise({ lower: 0.5, upper: 99.7 })
@@ -82,7 +80,7 @@ async function processOne(entry: CurationEntry): Promise<Photo> {
   const { width, height, channels } = base.info;
   const pipeline = () => sharp(base.data, { raw: { width, height, channels } });
 
-  const widths = WIDTHS.filter((w) => w <= width);
+  const widths: number[] = WIDTHS.filter((w) => w <= width);
   if (widths.length === 0 || widths.at(-1)! < width) widths.push(Math.min(width, WIDTHS.at(-1)!));
   const uniqueWidths = [...new Set(widths)];
 
@@ -100,15 +98,6 @@ async function processOne(entry: CurationEntry): Promise<Photo> {
       ];
     }),
   );
-
-  // Open Graph crop (attention strategy keeps the athlete in frame).
-  const og = path.join(OG_OUT, `${entry.id}.jpg`);
-  if (entry.featured && !isFresh(og, srcMtime)) {
-    await pipeline()
-      .resize({ width: 1200, height: 630, fit: "cover", position: sharp.strategy.attention })
-      .jpeg({ quality: 78, mozjpeg: true })
-      .toFile(og);
-  }
 
   // Tiny blurred placeholder, inlined as a data URI.
   const blurBuf = await pipeline().resize({ width: 16 }).blur(1.2).webp({ quality: 40 }).toBuffer();
@@ -134,7 +123,7 @@ async function main() {
   const { photos: curation } = JSON.parse(await fs.readFile(CURATION, "utf8")) as {
     photos: CurationEntry[];
   };
-  await fs.mkdir(OG_OUT, { recursive: true });
+  await fs.mkdir(OUT, { recursive: true });
   await fs.mkdir(path.dirname(MANIFEST), { recursive: true });
 
   const ids = new Set<string>();

@@ -1,11 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import Lenis from "lenis";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import type Lenis from "lenis";
+import { loadMotion, prefersReducedMotion } from "@/lib/motion";
 
 declare global {
   interface Window {
@@ -13,24 +10,33 @@ declare global {
   }
 }
 
-export const prefersReducedMotion = () =>
-  typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+export { prefersReducedMotion };
 
 /** Lenis smooth scroll driven by GSAP's ticker so ScrollTrigger stays in sync.
- *  Skipped entirely for reduced-motion users (native scroll). */
+ *  Loaded lazily after first paint; skipped for reduced-motion users. */
 export function SmoothScroll() {
   useEffect(() => {
     if (prefersReducedMotion()) return;
-    const lenis = new Lenis({ lerp: 0.11, wheelMultiplier: 1, autoRaf: false });
-    window.__lenis = lenis;
-    lenis.on("scroll", ScrollTrigger.update);
-    const tick = (time: number) => lenis.raf(time * 1000);
-    gsap.ticker.add(tick);
-    gsap.ticker.lagSmoothing(0);
+    let cancelled = false;
+    let cleanup = () => {};
+    // loadMotion() waits for idle, so smooth scrolling never competes with first paint.
+    Promise.all([import("lenis"), loadMotion()]).then(([{ default: LenisCtor }, { gsap, ScrollTrigger }]) => {
+      if (cancelled) return;
+      const lenis = new LenisCtor({ lerp: 0.11, wheelMultiplier: 1, autoRaf: false });
+      window.__lenis = lenis;
+      lenis.on("scroll", ScrollTrigger.update);
+      const tick = (time: number) => lenis.raf(time * 1000);
+      gsap.ticker.add(tick);
+      gsap.ticker.lagSmoothing(0);
+      cleanup = () => {
+        gsap.ticker.remove(tick);
+        lenis.destroy();
+        delete window.__lenis;
+      };
+    });
     return () => {
-      gsap.ticker.remove(tick);
-      lenis.destroy();
-      delete window.__lenis;
+      cancelled = true;
+      cleanup();
     };
   }, []);
   return null;

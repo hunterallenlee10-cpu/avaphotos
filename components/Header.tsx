@@ -14,9 +14,11 @@ export function Header() {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   // Close the menu on navigation.
-  useEffect(() => {
+  const [prevPath, setPrevPath] = useState(pathname);
+  if (prevPath !== pathname) {
+    setPrevPath(pathname);
     setOpen(false);
-  }, [pathname]);
+  }
 
   useEffect(() => {
     lockScroll(open);

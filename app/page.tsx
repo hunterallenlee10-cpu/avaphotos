@@ -110,9 +110,9 @@ export default function Home() {
             ))}
             <dl className="!mt-14 grid grid-cols-3 border-t border-line">
               {HOME.story.stats.map((s) => (
-                <div key={s.label} className="fade-up border-r border-line pr-3 pt-5 last:border-r-0 [&:not(:first-child)]:pl-3">
-                  <dt className="label order-2 mt-3 block text-mute">{s.label}</dt>
-                  <dd className="scoreboard -order-1 text-[clamp(1.9rem,3.6vw,3.4rem)]">{s.value}</dd>
+                <div key={s.label} className="fade-up flex flex-col border-r border-line pr-3 pt-5 last:border-r-0 [&:not(:first-child)]:pl-3">
+                  <dt className="label order-2 mt-3 text-mute">{s.label}</dt>
+                  <dd className="scoreboard order-1 text-[clamp(1.9rem,3.6vw,3.4rem)]">{s.value}</dd>
                 </div>
               ))}
             </dl>
