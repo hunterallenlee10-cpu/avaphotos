@@ -1,0 +1,962 @@
+[
+  {
+    "id": "baseball-helmet-profile",
+    "src": "/photos/baseball-helmet-profile",
+    "sport": "baseball",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoQABgAPu1kq04ppaQiMAgBMB2JQBfnAz75f4ssonKyvvLt0AD+2Vo7ZtZH+mBNxPOat55AXQKi9qWHjeISB7iAg1x5tBOlsPqF+AX40OKYBR0tfYdt6JJMIQAAAA==",
+    "dominant": "#e8e8e8",
+    "alt": "Stevenson batter in a green Mustangs helmet looks down between pitches, jersey lettering soft in the foreground",
+    "caption": "Between pitches",
+    "featured": false,
+    "focus": "50% 30%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "baseball-bat-on-shoulder",
+    "src": "/photos/baseball-bat-on-shoulder",
+    "sport": "baseball",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQBACdASoQABgAPu1orU6ppiSiMAgBMB2JQBOmUAE+S/cDnHKsPmJy+jvAAP7So4NHTcLav/KQdQO0qAHUoPagZiIlh8giJ3SXtyCn3rhvpte89zJPljjuZvTbh3FbyUwjt1iI5NvQFidvH185Pb4lHuSzP4vQAAA=",
+    "dominant": "#f8f8f8",
+    "alt": "Stevenson hitter rests a pine-tarred bat on his shoulder, neon sleeve and batting gloves in sharp focus",
+    "caption": "On deck",
+    "featured": false,
+    "focus": "50% 35%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "baseball-fence-talk",
+    "src": "/photos/baseball-fence-talk",
+    "sport": "baseball",
+    "width": 4812,
+    "height": 3456,
+    "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoQAAsAA4BaJYwCdADGhfJoitMAAMygVpyVB+nZS3Cv1KrPRP4RFBV37sBgdQ8NC0Ouc9r+igAAAA==",
+    "dominant": "#f8f8f8",
+    "alt": "Stevenson player leans on the dugout fence talking with a coach on a bright fall afternoon",
+    "caption": "Fence talk",
+    "featured": false,
+    "focus": "60% 40%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "baseball-helmet-stare",
+    "src": "/photos/baseball-helmet-stare",
+    "sport": "baseball",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABwBACdASoQABgAPu1iqk4ppaQiMAgBMB2JYwC7ACG+5HB8iSYPTLSKdfkvoAD4vRV6r/88nYMlHI6oPyWBftndXWcLmiEVBcu8YS/qUwwufP1AF1L++tf7643dSgAA",
+    "dominant": "#f8f8f8",
+    "alt": "Stevenson batter stares straight into the lens from under a Mustangs helmet, bat held upright beside him",
+    "caption": "Locked in",
+    "featured": true,
+    "focus": "50% 30%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "baseball-dugout-book",
+    "src": "/photos/baseball-dugout-book",
+    "sport": "baseball",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoQABgAPu1mqk4ppaOiMAgBMB2JZgCdABU/cK9D5k51qAD8VYxbYTp0NjgXbnoF5l/Aw22WxhZBxu0mQQqV+ei63KieNq8pYdmRZZ6eNPfHlYfRUk/M4FgbSDFjxMhZNWobRukTDkPAAA==",
+    "dominant": "#081818",
+    "alt": "Stevenson player in the dugout points to a line in the coach's scorebook",
+    "caption": "Dugout notes",
+    "featured": false,
+    "focus": "50% 40%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "baseball-cap-portrait",
+    "src": "/photos/baseball-cap-portrait",
+    "sport": "baseball",
+    "width": 3203,
+    "height": 4679,
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwAwCdASoQABcAPu1Ct1apoqakGAEwHYlAGJsEJFVJ9p7yfBM+sAD+nYwFFt9XxRgWLL9RktXWlgMyOpwqt8AbVauPy9Pu41reBIxhpGT6wWQAAAA=",
+    "dominant": "#384848",
+    "alt": "Stevenson player in a green Mustangs jersey and cap looks off toward the field, shallow focus behind him",
+    "caption": "Eyes on the field",
+    "featured": false,
+    "focus": "50% 30%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "baseball-swing",
+    "src": "/photos/baseball-swing",
+    "sport": "baseball",
+    "width": 2924,
+    "height": 4121,
+    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoQABcAPu1kqk2ppaQiMAgBMB2JQBdgDW0sOhJ2TgbiYAD+9bmdVnq+ehNevTBuPmHZpP59Optw5Enm/9w/2VgHNb0RaeGKl4uB7qe8ksq0SwW/q9vCkkwXeR6rBFnkAAA=",
+    "dominant": "#383838",
+    "alt": "Stevenson hitter drives through a swing at the plate as teammates watch from the dugout",
+    "caption": "Contact",
+    "featured": false,
+    "focus": "45% 45%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "baseball-catcher-dust",
+    "src": "/photos/baseball-catcher-dust",
+    "sport": "baseball",
+    "width": 2923,
+    "height": 4067,
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoQABYAPu1krU6ppaSiMAgBMB2JZgB3AARERYtjU70ZJIAA/u6Hryn50cBte05s66xkQcddGlrhvT/8SmYtAMjepXvxBVYiaQB3svnKBCIBZwP/lPPBmqsAAAA=",
+    "dominant": "#181818",
+    "alt": "Stevenson catcher reaches across the plate for a throw as dust kicks up around him",
+    "caption": "Dust at the plate",
+    "featured": true,
+    "focus": "60% 55%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "baseball-pitch-release",
+    "src": "/photos/baseball-pitch-release",
+    "sport": "baseball",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASoQABgAPu1iqk2ppaQiMAgBMB2JQBadA9DTGOHX1dgr9QAA/ulDZzOMzh4UT6UlZ50zdpAdztpdSv0IyQG3wp4A269yw3ULvq51ZhrjAAA=",
+    "dominant": "#384848",
+    "alt": "Stevenson pitcher finishes his delivery with the ball frozen in the air on its way to the plate",
+    "caption": "Release",
+    "featured": false,
+    "focus": "40% 50%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "football-run-23",
+    "src": "/photos/football-run-23",
+    "sport": "football",
+    "width": 2775,
+    "height": 3903,
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQBACdASoQABcAPu1mqk4ppaOiMAgBMB2JYgC7ACHZiC4ezmSfj4KUcAD+7ofkwg3QySTDIOjwUUHYT7Y57JnTtsfvCb6MYrFAXHgfleMtx7+QAAA=",
+    "dominant": "#080808",
+    "alt": "Stevenson ball carrier number 23 tucks the football and cuts upfield past a defender",
+    "caption": "Cutback",
+    "featured": false,
+    "focus": "50% 50%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "football-run-3",
+    "src": "/photos/football-run-3",
+    "sport": "football",
+    "width": 2655,
+    "height": 3716,
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASoQABYAPu1iqk4ppaQiMAgBMB2JQBadAr+xViCFeefihkAA+2EY7TJq4hYoJdBuhnik/W324z7iLfgT42PgT2WxgtMCG2duyboWRWEWUAA=",
+    "dominant": "#080808",
+    "alt": "Stevenson number 3 sprints with the ball as a defender grabs at his jersey",
+    "caption": "Pursuit",
+    "featured": false,
+    "focus": "50% 50%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "football-broken-tackle",
+    "src": "/photos/football-broken-tackle",
+    "sport": "football",
+    "width": 2961,
+    "height": 4503,
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACQAwCdASoQABgAPu1kq04ppaQiMAgBMB2JZAC7ACF8qq3kRGOAAP7a0MBS32E07jwJzuOmCz1vseVV4E7DZM9oRR3yLSkvjxbtp6LziM6B+1G5sb8pL6WfeeVtII6WQAA=",
+    "dominant": "#080808",
+    "alt": "Stevenson running back powers through a diving tackle in front of a Stevenson Football banner",
+    "caption": "Broken tackle",
+    "featured": true,
+    "focus": "50% 45%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "football-sideline-smile",
+    "src": "/photos/football-sideline-smile",
+    "sport": "football",
+    "width": 3268,
+    "height": 4890,
+    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACQAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JQBOgA6PwFiZmLBXAAM10NAhmiM0XZ2KBEZcXbtZ7g2JpRONjoSS+8npGLDFCk45jv4FnaXWH9ZUnw2aF13ewmuvEfY/c5ChcThhvgn5Hjj1TmCAAAA==",
+    "dominant": "#080808",
+    "alt": "Stevenson number 4 breaks into a wide smile on the sideline",
+    "caption": "Sideline",
+    "featured": true,
+    "focus": "45% 35%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "football-backpedal",
+    "src": "/photos/football-backpedal",
+    "sport": "football",
+    "width": 2468,
+    "height": 3730,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoQABgALrV2u12jqampiYC0SzAE6XpEHRxQDGWI6VlHKUREAP74i1iL+YQ5J/qWeDXxEZ+tjvkOUFRJal0gWtfKPkT0myDkfj+dlrq+oApKFb//Sl9d2bqM9AAAAA==",
+    "dominant": "#080808",
+    "alt": "Stevenson defensive back number 28 backpedals in coverage beside the orange down marker",
+    "caption": "Coverage",
+    "featured": false,
+    "focus": "55% 50%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "bvb-between-points",
+    "src": "/photos/bvb-between-points",
+    "sport": "beach-volleyball",
+    "width": 3308,
+    "height": 4850,
+    "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADQAwCdASoQABcALrV2u12jqampiYC0SxAE6AIc+1cf4aP+FZvnuAAA/ujdCtOCQeyFuB0adAvrshdF2TYIQPibCQOxL6JXQyhmUEMlxUENGuICnhAqNkxLi3hnmS6Y3CPJyIQeeDlxAAAA",
+    "dominant": "#080808",
+    "alt": "Stevenson beach volleyball partners meet between points in front of a packed stadium crowd",
+    "caption": "Between points",
+    "featured": false,
+    "focus": "50% 45%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "bvb-spike-net",
+    "src": "/photos/bvb-spike-net",
+    "sport": "beach-volleyball",
+    "width": 3029,
+    "height": 4584,
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwBACdASoQABgAPu1iqk2ppaQiMAgBMB2JZACdMoRwAII87ZpqAbMBP0+EAAD++P9In3WyVUZVV/gWmliB24OOUKGy/pXPu87reOVqLHoCMEBpi3ksWFPUm0soK5I/X9GkYSLnYR6rBAEAAAA=",
+    "dominant": "#c8d8e8",
+    "alt": "Stevenson player rises above the net to attack as his partner watches from the sand",
+    "caption": "Above the tape",
+    "featured": true,
+    "focus": "55% 35%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "bvb-head-down",
+    "src": "/photos/bvb-head-down",
+    "sport": "beach-volleyball",
+    "width": 3175,
+    "height": 4744,
+    "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABQBACdASoQABgAPu1orU6ppiSiMAgBMB2JYgC7MoABrKPIUB7qAOCv95HgAP6pIQK7rnqlO141aGw2wh4Z1jnJIKAdkcQ30RsnvFthlB4WYpi2dAh743sV5kRdN2JZOzPaDz2GwZdAAAAA",
+    "dominant": "#080808",
+    "alt": "Stevenson player number 3 stands with his head down, sweat and sunlight on his shoulders",
+    "caption": "Reset",
+    "featured": false,
+    "focus": "50% 30%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "bvb-attack-sky",
+    "src": "/photos/bvb-attack-sky",
+    "sport": "beach-volleyball",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoQABgAPu1kq04ppaQiMAgBMB2JZACdOUACxTE47dHiyFWgAP74+/Ebl2/L7SSPpKvQ4Yi24Nm8UJzWs0kFXnO8yqvlU86RVVHUf3RUUnfjYyUuJLtDUahfK3jd2AKYbk/ujvAA",
+    "dominant": "#d8e8f8",
+    "alt": "Stevenson attacker swings at a ball hanging against the sky, partner ready behind him",
+    "caption": "Swing",
+    "featured": false,
+    "focus": "50% 30%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "bvb-celebration",
+    "src": "/photos/bvb-celebration",
+    "sport": "beach-volleyball",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoQABgAPu1kq04ppaQiMAgBMB2JZgCdMoAKQYn/oCsllAAA/vVB5GHv1vA914YaOg2obnculCfvug1DJ9mTPB6Mljv6P5cGfe5tOYTtUq+vecWkS4z5cpvxiA0ev2uswSKlPwEibsiuaAAA",
+    "dominant": "#080808",
+    "alt": "Stevenson partners celebrate a point with arms up at the net",
+    "caption": "Side out",
+    "featured": false,
+    "focus": "50% 40%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "bvb-dig",
+    "src": "/photos/bvb-dig",
+    "sport": "beach-volleyball",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoQABgAPu1mqk2ppaQiMAgBMB2JZAAAL/vMtRlIp8xSgAD+OOGNtObT/qtxubiJRDdm6YWK7kbjnEVMQklPSW06y7BHLVFF1GyGiG0RwZlR/+H7DbAv7sNdsBIMAAAA",
+    "dominant": "#080808",
+    "alt": "Stevenson player crouches to pass as the ball arrives over the crowd",
+    "caption": "The dig",
+    "featured": false,
+    "focus": "45% 50%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "bvb-jump-serve",
+    "src": "/photos/bvb-jump-serve",
+    "sport": "beach-volleyball",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAwCdASoQABgAPu1iqk4ppaQiMAgBMB2JaACdL1ABnzXoH55sF9QA+mDQO1/uJgN5CBD3HZWoPMk7yb0Wob4sS2X62qEIWFX4GE4K1Uv6MZ26pSozx9WgAAA=",
+    "dominant": "#78a8d8",
+    "alt": "Stevenson player launches a jump serve against a clear blue sky above the Stevenson University banner",
+    "caption": "Jump serve",
+    "featured": true,
+    "focus": "50% 40%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "lacrosse-huddle-lights",
+    "src": "/photos/lacrosse-huddle-lights",
+    "sport": "lacrosse",
+    "width": 5184,
+    "height": 3456,
+    "blur": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADwAQCdASoQAAsAA4BaJZQAAueFWuVbzwAA/vbzLvymi8bR/M28RUy9Eq++hJsRgfjJsoAA",
+    "dominant": "#080808",
+    "alt": "Stevenson men's lacrosse players crowd together sticks raised in a celebration huddle under the lights",
+    "caption": "Huddle",
+    "featured": true,
+    "focus": "45% 45%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "lacrosse-number-1",
+    "src": "/photos/lacrosse-number-1",
+    "sport": "lacrosse",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoQABgAPu1iqk2ppaQiMAgBMB2JZQAAW+/E6beFz94kjvAAAP7ypPTC3U1qahodt2RaL5LqrQC6TZ/PUFq2GNqxm6l7kEbnU+aAAA==",
+    "dominant": "#080808",
+    "alt": "Stevenson number 1 lowers his shoulder into a defender, stick high, during a night game",
+    "caption": "Contact",
+    "featured": false,
+    "focus": "50% 40%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "lacrosse-chase",
+    "src": "/photos/lacrosse-chase",
+    "sport": "lacrosse",
+    "width": 5184,
+    "height": 3456,
+    "blur": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAwAgCdASoQAAsAA4BaJQBdj+ACdLECVz6OAAD++RhtaGIw2/V0nNR0onUEoAAqKk3kdmgAAAA=",
+    "dominant": "#080808",
+    "alt": "Stevenson defender lunges after a ball carrier in red across the turf at night",
+    "caption": "Chase",
+    "featured": false,
+    "focus": "55% 45%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "lacrosse-dodge-52",
+    "src": "/photos/lacrosse-dodge-52",
+    "sport": "lacrosse",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoQABgAPu1iqk2ppaQiMAgBMB2JQAALfSOdINtsM22Yh0AA/vQfXEFA3kv2sRF/eBsTxNNrCyk8hauXz3O5JXlro4Dyar+/Ybo5nII5/x88d0AA",
+    "dominant": "#080808",
+    "alt": "Stevenson attacker cradles past a defender wearing number 52",
+    "caption": "Dodge",
+    "featured": false,
+    "focus": "55% 40%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "lacrosse-number-25",
+    "src": "/photos/lacrosse-number-25",
+    "sport": "lacrosse",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoQABgAPu1kqU2ppaQiMAgBMB2JZQDA3CHf42GLFsEK4eGAAP7yoNjHocTtUjL6nLw2Bl3Y0Jld7gc5pYhzipoVtlFJ0OQ4AAA=",
+    "dominant": "#080808",
+    "alt": "Stevenson number 25 plants and points his stick, long hair spilling from his helmet",
+    "caption": "Set the play",
+    "featured": false,
+    "focus": "50% 40%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "lacrosse-split-dodge",
+    "src": "/photos/lacrosse-split-dodge",
+    "sport": "lacrosse",
+    "width": 5184,
+    "height": 3456,
+    "blur": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADwAQCdASoQAAsAA4BaJQBdgCHYfJZtZgAA/vd9h+DWE+W1zNiP3TOx4Nw7lWMWu4sAAA==",
+    "dominant": "#080808",
+    "alt": "Stevenson midfielder splits two defenders at full speed under stadium lights",
+    "caption": "Split",
+    "featured": false,
+    "focus": "55% 50%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "lacrosse-goal-celebration",
+    "src": "/photos/lacrosse-goal-celebration",
+    "sport": "lacrosse",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JZwAAW+uNrG2mAXU6dDPAAP70G/ddOOhvKkRqB971FOpUfwYFQ+OvoaLy8AAA",
+    "dominant": "#080808",
+    "alt": "Stevenson teammates wrap up a goal scorer in a celebration under the lights",
+    "caption": "After the goal",
+    "featured": false,
+    "focus": "50% 45%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "lacrosse-number-46",
+    "src": "/photos/lacrosse-number-46",
+    "sport": "lacrosse",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQBACdASoQABgAPu1iqk2ppaQiMAgBMB2JZQDE2B6P28ezH8l5HUILAAD+5aBeNpLgTkwjv2xfFw+TRgT+k2CPEIP4Lb3o1gTIMcOERgAAAA==",
+    "dominant": "#181818",
+    "alt": "Stevenson number 46 walks back to his position, stick in hand, in a quiet moment of the night game",
+    "caption": "Reset",
+    "featured": false,
+    "focus": "50% 40%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "portraits-five-suits",
+    "src": "/photos/portraits-five-suits",
+    "sport": "portraits",
+    "width": 5184,
+    "height": 3456,
+    "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAsAA4BaJZQAArCdAP9wAAD+mT+mWiKt5dFxhlIfIyjUyD+TeiYPbvvXBALtlmwwGkwXEAA=",
+    "dominant": "#080808",
+    "alt": "Five friends in suits pose arm in arm beneath the Mustang statue",
+    "caption": "The group",
+    "featured": false,
+    "focus": "50% 50%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "portraits-bench-grads",
+    "src": "/photos/portraits-bench-grads",
+    "sport": "portraits",
+    "width": 3737,
+    "height": 3088,
+    "blur": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQAA0AA4BaJZACdACybZORAADhDRKYn7jTLWZKQqA2rVJ13baxQRHGykN2q0AA",
+    "dominant": "#080808",
+    "alt": "Two graduates in gowns and cords sit side by side on a wooden bench",
+    "caption": "Class of",
+    "featured": false,
+    "focus": "50% 45%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "portraits-boardwalk",
+    "src": "/photos/portraits-boardwalk",
+    "sport": "portraits",
+    "width": 5096,
+    "height": 3397,
+    "blur": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoQAAsAA4BaJZACdAD0JrdlgAD8NZPL+JDxL5a9cGCz630OGxsvoqZMgLS03Ef3uVgAAA==",
+    "dominant": "#d8e8f8",
+    "alt": "Five graduates in gowns and stoles laugh while walking across a campus boardwalk under blue sky",
+    "caption": "Last walk",
+    "featured": false,
+    "focus": "50% 50%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "portraits-hoodie",
+    "src": "/photos/portraits-hoodie",
+    "sport": "portraits",
+    "width": 3457,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQBACdASoQABgAPu1kqk4ppaQiMAgBMB2JZACdMoAC9B+sWEjts0h0AAD9Ra8rDrL0FZ51cnG8YK/DxXpd4dj6sNOag469//lnevDqSpceN251C0GpdEb7xB1MAA==",
+    "dominant": "#080808",
+    "alt": "Student in a gray hoodie and sunglasses grins while walking through a parking lot as a friend runs behind",
+    "caption": "Candid",
+    "featured": false,
+    "focus": "40% 40%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "portraits-fall-walk",
+    "src": "/photos/portraits-fall-walk",
+    "sport": "portraits",
+    "width": 3162,
+    "height": 4423,
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQAwCdASoQABYAPu1iqU2ppaQiMAgBMB2JbACo9CGkm/Li24HAAP7h+rkGzgQ4hbY76tfNQzR56ppi/z/Ykq+E4l6aeZM7Cz7S5eDgvzw+Sh70/g7m6gAA",
+    "dominant": "#f8f8f8",
+    "alt": "Three friends in suits walk toward the camera with backpacks against bright fall foliage",
+    "caption": "Fall, suited",
+    "featured": true,
+    "focus": "50% 45%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "portraits-stadium-grad",
+    "src": "/photos/portraits-stadium-grad",
+    "sport": "portraits",
+    "width": 4876,
+    "height": 3450,
+    "blur": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAABwAQCdASoQAAsAA4BaJQAAU4Y0IAD+m6i/j1t/oBNauZecvQPDxss9wVif0DwAAAA=",
+    "dominant": "#f8f8f8",
+    "alt": "Graduate in gown and teal stole stands alone at midfield in front of the Mustang Stadium stands",
+    "caption": "Midfield",
+    "featured": false,
+    "focus": "50% 60%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "portraits-cap-toss",
+    "src": "/photos/portraits-cap-toss",
+    "sport": "portraits",
+    "width": 3350,
+    "height": 5025,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACQAwCdASoQABgALrV2u12jqampiYC0SygGGaHoyADFCfXoBYAAAP7q8xN96RRPSgKBZPut0ZEtiR88QRXfO5wRMrkqwTYfdF2zSoPoyCr5AAAA",
+    "dominant": "#f8f8f8",
+    "alt": "Graduate throws his cap into the air at midfield, Mustang Stadium lettering behind him",
+    "caption": "Cap toss",
+    "featured": true,
+    "focus": "50% 45%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "portraits-fall-lunch",
+    "src": "/photos/portraits-fall-lunch",
+    "sport": "portraits",
+    "width": 3069,
+    "height": 4544,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoQABgAPu1iqU2ppaQiMAgBMB2JaACdMoABwsRZdmEvJzFjAADNM4KcdjvRIes5Bv9JWzBU1dXsUQGr+R2v4B51GoZVIJpSmXzBpI1HRZmgAdYlsIP2r62zijYAAA==",
+    "dominant": "#384858",
+    "alt": "Student laughs while walking with a drink and a takeout bag in front of orange fall trees",
+    "caption": "Golden hour",
+    "featured": false,
+    "focus": "50% 35%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "portraits-statue-cigars",
+    "src": "/photos/portraits-statue-cigars",
+    "sport": "portraits",
+    "width": 3456,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYgC7IExDMRgVj32x/7eEFuGAAOAdHbXye5gGBPupKTUesA0zAEMgmN8HmEmjjMP8ZifCN9XRKTydpiRxnvr/opR1jjpzB7MtH1Cm2P2F3otPyUmnqhV2qVldfm100wAAAA==",
+    "dominant": "#080808",
+    "alt": "Two graduates in sunglasses and teal stoles celebrate with cigars under the Mustang statue",
+    "caption": "Made it",
+    "featured": false,
+    "focus": "50% 40%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "soccer-arms-raised",
+    "src": "/photos/soccer-arms-raised",
+    "sport": "soccer",
+    "width": 3457,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JQBdmUAFI3E8NaIcO+e6AAP7+SeWLpaiUpJG5eJcRtiMRSmcpqMEQ2ylY0yNtYwsIoN/l0w1tj+gEDq2jknFHJQURboteBeNTVg0/G1gAAA==",
+    "dominant": "#080818",
+    "alt": "Stevenson player throws both arms to the night sky after a goal while opponents in green walk away",
+    "caption": "Arms up",
+    "featured": true,
+    "focus": "50% 35%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "soccer-number-16",
+    "src": "/photos/soccer-number-16",
+    "sport": "soccer",
+    "width": 2855,
+    "height": 4183,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAwCdASoQABcAPu1mqk2ppaQiMAgBMB2JYwDG9CHgC6HbNnvr1bzAAP7wylQBbuYIJQ5kyTxuk6mnp+cLon9tLT0mJY8GxFPaVD1mk56q0tzbiAAAAA==",
+    "dominant": "#080818",
+    "alt": "Stevenson number 16 carries the ball upfield under the lights as a York defender closes",
+    "caption": "Carry",
+    "featured": false,
+    "focus": "55% 45%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "soccer-tackle-battle",
+    "src": "/photos/soccer-tackle-battle",
+    "sport": "soccer",
+    "width": 3122,
+    "height": 4770,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JQAALfVG8BWmP6frjJ2AA/vQdXaPxcvzoostOYIXFGw5RPLlnC19k+Pcmj8xhhRO5+P3UM2w14m/28P8E4RjhugqAQAAA",
+    "dominant": "#080808",
+    "alt": "Stevenson player battles two York defenders for the ball in a night match",
+    "caption": "Fifty-fifty",
+    "featured": false,
+    "focus": "50% 50%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "soccer-wings-out",
+    "src": "/photos/soccer-wings-out",
+    "sport": "soccer",
+    "width": 2658,
+    "height": 3881,
+    "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBACdASoQABcAPu1krU6ppaSiMAgBMB2JZgCdAGjdknkI9CPeV4mBAAD8/Ruw03eKk96UV3scfqxeV/3CwDpvxqkZHVdgK477ePI7O1R8KAwLULv+Hjsp1GLDxTdxQX6FS7SSBJ+OW/vLYffmt1YQAAA=",
+    "dominant": "#182828",
+    "alt": "Stevenson number 15 spreads his arms wide as he winds up to strike the ball",
+    "caption": "Wind-up",
+    "featured": false,
+    "focus": "50% 55%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "soccer-dribble",
+    "src": "/photos/soccer-dribble",
+    "sport": "soccer",
+    "width": 3190,
+    "height": 4586,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAwCdASoQABcAPu1orU6ppiSiMAgBMB2JQBadDSd4HStIvXtxEgAA/uhCsTMLSoU7sguO0haWehJTwRPa4F8luRXci582ehfUxF7ztPIaCsj8To1uvWi6YAA=",
+    "dominant": "#b8c8c8",
+    "alt": "Stevenson player dribbles toward goal under an overcast sky, a teammate trailing",
+    "caption": "Into space",
+    "featured": false,
+    "focus": "55% 50%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "soccer-shield",
+    "src": "/photos/soccer-shield",
+    "sport": "soccer",
+    "width": 3005,
+    "height": 4508,
+    "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABwAwCdASoQABgAPu1mqk2ppaQiMAgBMB2JYgCdAGkqLR5zX4AA/mpG6ceybbQD/5MpmKSSckmiX55TOXKAHRYrVGBJc4SISL4ySrMZjWamMsblHWC2yzV3wennNZZ2r+HEynr9JujtxAAA",
+    "dominant": "#b8c8c8",
+    "alt": "Stevenson number 15 shields the ball over a fallen opponent",
+    "caption": "Shield",
+    "featured": false,
+    "focus": "50% 55%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "soccer-scoreboard-turn",
+    "src": "/photos/soccer-scoreboard-turn",
+    "sport": "soccer",
+    "width": 3457,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQAwCdASoQABgALrV2u12jqampiYC0SygABcrdxJkrvceyrt2AAP75Dmm/AAm78AnzRZr35EWi2gCxi90MlAHuPQjQ1XtHCmbUPqSGtk2K2yLeLgA=",
+    "dominant": "#080808",
+    "alt": "Stevenson women's soccer player in striped kit turns with the ball as the scoreboard glows behind her",
+    "caption": "Scoreboard",
+    "featured": false,
+    "focus": "55% 40%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "soccer-strike-3-06",
+    "src": "/photos/soccer-strike-3-06",
+    "sport": "soccer",
+    "width": 3457,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoQABgAPu1iqk2ppaQiMAgBMB2JQAALfXNuLWIlnLTjDWIAAP70K1s0rLPxJ/KEb9U1NUAbIUnzz7veqOhsoAuf6oFDLbai4umsRb/uuXvlVOYAAAA=",
+    "dominant": "#080808",
+    "alt": "Stevenson women's soccer player strikes the ball at night beneath a scoreboard reading 3:06",
+    "caption": "3:06 to play",
+    "featured": true,
+    "focus": "50% 45%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "soccer-lights-portrait",
+    "src": "/photos/soccer-lights-portrait",
+    "sport": "soccer",
+    "width": 3457,
+    "height": 5184,
+    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAwCdASoQABgAPu1iqU2ppaOiMAgBMB2JQAALfZiUCFfzUfJmiIcAAP70KnvHStkcyz06Ql3n44SLcCjZy7H7oegDaXvSQ4uEM3OyvlFy3aggZt3C+Bicpllg263ywji6ABDAAAA=",
+    "dominant": "#080808",
+    "alt": "Stevenson women's soccer player in profile, braid over her shoulder, stadium lights glowing behind her",
+    "caption": "Under the lights",
+    "featured": true,
+    "focus": "50% 30%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  },
+  {
+    "id": "soccer-dribble-pressure",
+    "src": "/photos/soccer-dribble-pressure",
+    "sport": "soccer",
+    "width": 3301,
+    "height": 4951,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoQABgAPu1yrU+pp6QiMAgBMB2JYwC7AGlgCkWSIjQ2AszuRcAA/v2bXgx5+elGVe2blEu5pi37OKPjamWnYaVbNRPxxguc7YmZKAg94fNUWPCSgAA=",
+    "dominant": "#080808",
+    "alt": "Stevenson women's soccer player in a blue headband dribbles away from a defender in maroon",
+    "caption": "Pressure",
+    "featured": false,
+    "focus": "55% 50%",
+    "widths": [
+      640,
+      828,
+      1080,
+      1600,
+      2400
+    ]
+  }
+]
