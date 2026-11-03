@@ -56,6 +56,12 @@ export function Footer() {
         <span>© {YEAR} {BRAND.name}</span>
         <span>All photographs © {BRAND.person}. Please don’t reuse without permission.</span>
       </div>
+      <p className="label mt-2 normal-case! text-mute">
+        Website by{" "}
+        <a href="https://www.leeenterprisesunlimited.com/" target="_blank" rel="noopener" className="u-link">
+          Lee Enterprises Unlimited
+        </a>
+      </p>
     </footer>
   );
 }
